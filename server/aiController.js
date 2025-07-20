@@ -7,7 +7,7 @@ exports.checkMemeFact = async (req, res) => {
   try {
     const { text } = req.body;
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-001' });
 
     const prompt = `
 
