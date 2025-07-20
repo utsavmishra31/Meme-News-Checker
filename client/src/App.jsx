@@ -51,7 +51,7 @@ function App() {
   const sendTextToAI = async (extractedText) => {
     setAiLoading(true);
     try {
-      const res = await fetch('http://localhost:5050/api/analyze-text', {
+      const res = await fetch('https://meme-backend.onrender.com/api/analyze-text', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: extractedText }),
@@ -79,7 +79,7 @@ function App() {
       setText('');
       setResult('');
       try {
-        const res = await fetch('http://localhost:5050/api/extract-from-url', {
+        const res = await fetch('https://meme-backend.onrender.com/api/extract-from-url', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ imageUrl: link }),
